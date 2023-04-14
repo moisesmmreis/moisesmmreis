@@ -1,8 +1,82 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
-	theme: {
-		extend: {},
-	},
-	plugins: [],
-}
+  darkMode: ["class", '[data-theme="dark"]'],
+  content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
+  theme: {
+    extend: {
+      fontFamily: {
+        sans: ["Inter"],
+        serif: ["IBM Plex Serif"],
+      },
+      colors: {
+        default: {
+          50: "#f7f7f7",
+          100: "#e3e3e3",
+          200: "#c8c8c8",
+          300: "#a4a4a4",
+          400: "#818181",
+          500: "#666666",
+          600: "#515151",
+          700: "#434343",
+          800: "#383838",
+          900: "#333333",
+          950: "#1a1a1a",
+        },
+        primary: {
+          50: "#fefce8",
+          100: "#fdf7c4",
+          200: "#fbec8d",
+          300: "#f9d949",
+          400: "#f5c41a",
+          500: "#e5ab0d",
+          600: "#c68408",
+          700: "#9e5e0a",
+          800: "#824a11",
+          900: "#6f3d14",
+          950: "#411f07",
+        },
+        secondary: {
+          50: "#f5f6fa",
+          100: "#ebedf3",
+          200: "#d2d8e5",
+          300: "#aab5cf",
+          400: "#7c8db4",
+          500: "#5c6f9b",
+          600: "#485881",
+          700: "#3c486b",
+          800: "#343e58",
+          900: "#2f364b",
+          950: "#1f2332",
+        },
+        tertiary: {
+          50: "#fef2f2",
+          100: "#ffe1e1",
+          200: "#ffc9c9",
+          300: "#fea3a3",
+          400: "#fb6e6e",
+          500: "#f45050",
+          600: "#e02222",
+          700: "#bd1818",
+          800: "#9c1818",
+          900: "#811b1b",
+          950: "#460909",
+        },
+      },
+      keyframes: {
+        "accordion-down": {
+          from: { height: 0 },
+          to: { height: "var(--radix-accordion-content-height)" },
+        },
+        "accordion-up": {
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: 0 },
+        },
+      },
+      animation: {
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out",
+      },
+    },
+  },
+  plugins: [require("tailwindcss-animate")],
+};
