@@ -1,7 +1,5 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { Image } from "@astrojs/image/components";
-import Img from "../../assets/img/IA0-dP_hnbl.jpg";
 
 export const prerender = true;
 ---
@@ -19,12 +17,10 @@ export const prerender = true;
   </section>
   <section class="grid grid-cols-2 grid-rows-2 gap-6 mb-16">
     <div class="flex flex-col gap-2 row-span-2">
-      <Image
+      <img
         class="object-cover rounded-2xl"
-        src={Img}
+        src="../../assets/img/IA0-dP_hnbl.jpg"
         alt="descriptive text"
-        width={800}
-        height={1000}
       />
       <span class="text-sm text-default-900/70"
         >I am from the State of Bahia and, as I was a History student is the
