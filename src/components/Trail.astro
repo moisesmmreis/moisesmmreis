@@ -1,0 +1,27 @@
+<div
+  class="fixed z-50 w-8 h-8 top-0 left-0 backdrop-blur-sm border rounded-full pointer-events-none opacity-0 transition-opacity group-hover:opacity-100"
+  id="mouse-trail"
+>
+</div>
+
+<script>
+  const Trail = document.getElementById("mouse-trail");
+
+  const animateTrail = (e) => {
+    const x = e.clientX - Trail.offsetWidth / 2,
+      y = e.clientY - Trail.offsetHeight / 2;
+
+    const keyframes = {
+      transform: `translate(${x}px, ${y}px)`,
+    };
+
+    Trail.animate(keyframes, {
+      duration: 300,
+      fill: "forwards",
+    });
+  };
+
+  window.onmousemove = (e) => {
+    animateTrail(e);
+  };
+</script>

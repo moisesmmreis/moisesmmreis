@@ -1,48 +1,80 @@
 ---
 import Layout from "../layouts/Layout.astro";
 
+import Feat from "../components/Feat.astro";
+import Title from "../components/Title.astro";
+import Image from "../components/Image.astro";
+import Card from "../components/Card.astro";
+import { Button } from "../components/Button";
+
 export const prerender = true;
 ---
 
 <Layout title="Moisés Reis. Get to know me">
   <section class="flex flex-col gap-6 mb-16">
-    <span class="text-sm py-1 px-2 rounded-xl text-white bg-secondary-500 w-fit"
-      >Let me help you in your next project</span
-    >
-    <h1 class="font-serif font-semibold text-4xl">
-      My name is Moisés Reis. Brazilian Software Engineering student, UI/UX
-      enthusiast and father of the four beautiful cats.
-    </h1>
-    <button class="border px-2 py-1 rounded-xl w-fit">talk to me</button>
+    <Feat title="Let me help you in your next project" />
+    <Title
+      title="My name is Moisés Reis. Brazilian Software Engineering student, UI/UX enthusiast and father of the four beautiful cats."
+    />
+    <Button>Talk to me</Button>
   </section>
-  <section class="grid grid-cols-1 md:grid-cols-2 grid-rows-2 gap-6 mb-16">
-    <div class="flex flex-col gap-2 row-span-2">
-      <img
-        class="object-cover rounded-2xl"
+  <section class="grid grid-cols-2 grid-flow-row auto-rows-min gap-6 mb-16">
+    <div class="flex flex-col gap-6">
+      <Image
         src="../../assets/img/IA0-dP_hnbl.jpg"
-        alt="descriptive text"
-      >
-      <span class="text-sm text-default-900/70"
-        >I am from the State of Bahia and, as I was a History student is the
-        past, I've been learning about lots of interesting stuff</span
-      >
+        alt="Salvador, Bahia"
+        sub="I am from the State of Bahia and, as I was a History student is the past, I've been learning about lots of interesting stuff"
+      />
+      <iframe
+        style="border-radius:12px"
+        src="https://open.spotify.com/embed/album/4ViuBpPF350uPP6bVoDmQ2?utm_source=generator"
+        width="100%"
+        height="152"
+        allowfullscreen=""
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy"></iframe>
     </div>
-    <div class="border rounded-2xl p-4">
-      <p class="text-default-900/50 mb-4">
-        Right now, I can build apps with <span class="text-default-900"
-          >WordPress</span
-        > with custom theming, <span class="text-default-900"
-          >React and Next, Vue, Nuxt and Astro</span
-        >, I can also use vanilla CSS to handle interfaces as well as <span
-          class="text-default-900">Tailwind and Bootstrap</span
-        > to speed things up ------ at the moment, I persuing my carreer in <span
-          class="text-default-900">Software Engineering</span
-        > in college (here in Brazil) and looking out for some oportunities abroad
-        to better my skills. I am also building some small side projects that will
-        be shown in this portfolio and on my social media, hope you like it <span
-          class="text-default-900">😺</span>
-      </p>
-      <button class="border px-2 py-1 rounded-xl w-fit">follow me</button>
+    <div class="flex flex-col gap-6">
+      <Card>
+        <p class="text-default-900/50 mb-4">
+          Right now, I can build apps with <span class="text-default-900"
+            >WordPress</span
+          > with custom theming, <span class="text-default-900"
+            >React and Next, Vue, Nuxt and Astro</span
+          >, I can also use vanilla CSS to handle interfaces as well as <span
+            class="text-default-900">Tailwind and Bootstrap</span
+          > to speed things up ------ at the moment, I persuing my carreer in <span
+            class="text-default-900">Software Engineering</span
+          > in college (here in Brazil) and looking out for some oportunities abroad
+          to better my skills. I am also building some small side projects that will
+          be shown in this portfolio and on my social media, hope you like it <span
+            class="text-default-900">😺</span
+          >
+        </p>
+        <Button>Follow me</Button>
+      </Card>
+      <Card>
+        <p class="text-default-900/50">
+          I had some international experience in the past when I worked for <span
+            class="text-default-900">Yamana Gold Inc.</span
+          > from 2018 to 2020. Being honest, I was an apprentice and it wasn't a
+          IT job, I still consider it to be highly valuable since I was able to work
+          with people from a miriad of nationalities
+        </p>
+      </Card>
+      <Card>
+        <p class="text-default-900/50 mb-4">
+          During the COVID-19 pandemic I was enrolled in college studying
+          History. I had a grasp of IT back then, because of it ----- and to
+          keep my mind busy ----- a friend and I founded the <span
+            class="text-default-900">Boots of Judas</span
+          >, a website to gather and publish verified content about Latin
+          America's history. I was responsible for managing everyone and
+          handling the UI/UX design and backend. Everything was built on top of
+          WordPress
+        </p>
+        <Button>Pay a visit</Button>
+      </Card>
     </div>
   </section>
 </Layout>

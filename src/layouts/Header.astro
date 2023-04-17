@@ -1,11 +1,16 @@
+---
+import Logo from "../components/Logo.astro";
+import { Button } from "../components/Button";
+---
+
 <header class="grid grid-cols-2 mb-6">
-    <div class="py-6 flex flex-row justify-start content-center">
-        <span class="select-none text-lg font-black">mmr.</span>
-    </div>
-    <nav class="py-6 flex flex-row justify-end content-center gap-6">
-        <span class="lowercase underline opacity-60 hover:opacity-100 transition-opacity cursor-pointer">Linkedin</span>
-        <span class="lowercase underline opacity-60 hover:opacity-100 transition-opacity cursor-pointer">Github</span>
-        <span class="lowercase underline opacity-60 hover:opacity-100 transition-opacity cursor-pointer">Twitter</span>
-        <span class="lowercase underline opacity-60 hover:opacity-100 transition-opacity cursor-pointer">Hire me</span>
-    </nav>
+  <div class="py-6 flex flex-row justify-start content-center">
+    <Logo title="mmr." />
+  </div>
+  <nav class="py-6 flex flex-row justify-end content-center gap-6">
+    <Button variant="link">Linkedin</Button>
+    <Button variant="link">Github</Button>
+    <Button variant="link">Twitter</Button>
+    <Button variant="link">Hire me</Button>
+  </nav>
 </header>
