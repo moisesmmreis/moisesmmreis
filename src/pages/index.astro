@@ -7,7 +7,8 @@ import Image from "../components/Image.astro";
 import Card from "../components/Card.astro";
 import Project from "../components/Project.astro";
 import { Button } from "../components/Button";
-import Badge from "../components/Badge.astro";
+
+import Sparkle from "../icons/Sparkle.astro";
 
 export const prerender = true;
 ---
@@ -27,7 +28,16 @@ export const prerender = true;
         alt="Salvador, Bahia"
         sub="I am from the State of Bahia and, as I was a History student is the past, I've been learning about lots of interesting stuff"
       />
-      <Project title="hospital management system" web="Next" framework="React" ui="Tailwind" components="Shadcn" database="Supabase" button="View repository">
+      <Project
+        class="opacity-70 select-none"
+        title="hospital management system"
+        web="Next"
+        framework="React"
+        ui="Tailwind"
+        components="Shadcn"
+        database="Supabase"
+        button="View repository"
+      >
         <p class="text-default-900/50 mb-4">
           I am developing a full-fledged hospital website with a management
           system capable of handling appointments, exams results, billing and
@@ -38,10 +48,36 @@ export const prerender = true;
           > are also handy since they provide some much needed stability and reliability
         </p>
       </Project>
+      <Project
+        class="opacity-70 select-none"
+        title="ai veterinary"
+        web="Vite"
+        framework="Astro"
+        ui="Tailwind"
+        components="Shadcn"
+        database="Supabase"
+        button="On the go"
+      >
+        <p class="text-default-900/50 mb-4">
+          Since we now have this whole AI thing with dozens of diferent --- and
+          wonderful --- ideas, I decided to get on to mine own with a project to
+          help those who have simple questions about their pets. The ideia is to
+          provide some basic info from ChatGPT in a form, nothing crazy or
+          anything. I intend to start it as soon as I have some free time to do
+          so
+        </p>
+      </Project>
     </div>
     <div class="flex flex-col gap-6">
       <Card>
-        <p class="text-default-900/50 mb-4">
+        <Sparkle
+          big="#f5c41a"
+          bottom="#f5c41a"
+          top="#f5c41a"
+          width="32"
+          height="32"
+        />
+        <p class="text-default-900/50 my-4">
           Right now, I can build apps with <span class="text-default-900"
             >WordPress</span
           > with custom theming, <span class="text-default-900"
@@ -67,19 +103,34 @@ export const prerender = true;
           with people from a miriad of nationalities
         </p>
       </Card>
-      <Card>
+      <Project
+        title="judas as botas de"
+        web="WordPress"
+        framework="PHP"
+        ui="Tailwind"
+        components="Flowbite"
+        database="MySQL"
+        button="Pay a visit"
+      >
         <p class="text-default-900/50 mb-4">
           During the COVID-19 pandemic I was enrolled in college studying
           History. I had a grasp of IT back then, because of it ----- and to
           keep my mind busy ----- a friend and I founded the <span
-            class="text-default-900">Boots of Judas</span
+            class="text-default-900">JUDAS, As botas de</span
           >, a website to gather and publish verified content about Latin
           America's history. I was responsible for managing everyone and
           handling the UI/UX design and backend. Everything was built on top of
-          WordPress
+          <span class="text-default-900">WordPress</span> and <span
+            class="text-default-900">Elementor</span
+          >, but I will redo it using a custom theme made from scratch in the
+          comming months
         </p>
-        <Button>Pay a visit</Button>
-      </Card>
+      </Project>
+      <Image
+        src="../../assets/img/a2s2brg9uki61.webp"
+        alt="My Cats"
+        sub="I have four extremely beautiful cats with me"
+      />
     </div>
   </section>
 </Layout>

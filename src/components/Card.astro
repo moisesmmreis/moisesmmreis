@@ -1,3 +1,15 @@
+---
+import type { HTMLAttributes } from 'astro/types';
+
+export interface Props extends HTMLAttributes<'div'> {
+  // ...
+}
+
+const { 
+  ...attrs
+} = Astro.props
+---
+
 <div class="border rounded-2xl p-4 !h-fit relative">
   <slot />
 </div>
