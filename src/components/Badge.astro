@@ -1,0 +1,9 @@
+---
+export interface Props {
+  title: string;
+}
+
+const { title } = Astro.props as Props;
+---
+
+<li class="text-sm text-default-900/50 lowercase">{title}</li>

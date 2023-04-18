@@ -1,0 +1,31 @@
+---
+import Card from "./Card.astro";
+import { Button } from "./Button";
+import anime from "animejs";
+
+export interface Props {
+  title: string;
+  web: string;
+  framework: string;
+  ui: string;
+  components: string;
+  database: string;
+  button: string;
+}
+
+const { title, web, framework, ui, components, database, button } =
+  Astro.props as Props;
+---
+
+<Card>
+  <h2 class="text-lg font-bold">{title}</h2>
+  <ul class="flex flex-row gap-2 mb-4">
+    <li class="text-sm text-default-900/50 lowercase">{web}</li>
+    <li class="text-sm text-default-900/50 lowercase">{framework}</li>
+    <li class="text-sm text-default-900/50 lowercase">{ui}</li>
+    <li class="text-sm text-default-900/50 lowercase">{components}</li>
+    <li class="text-sm text-default-900/50 lowercase">{database}</li>
+  </ul>
+  <slot />
+  <Button>{button}</Button>
+</Card>
