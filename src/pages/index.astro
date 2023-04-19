@@ -9,6 +9,7 @@ import Project from "../components/Project.astro";
 import { Button } from "../components/Button";
 
 import Sparkle from "../icons/Sparkle.astro";
+import { ArrowTopRightIcon } from "@radix-ui/react-icons";
 
 export const prerender = true;
 ---
@@ -29,7 +30,6 @@ export const prerender = true;
         sub="I am from the State of Bahia and, as I was a History student is the past, I've been learning about lots of interesting stuff"
       />
       <Project
-        class="opacity-70 select-none"
         title="hospital management system"
         web="Next"
         framework="React"
@@ -38,7 +38,7 @@ export const prerender = true;
         database="Supabase"
         button="View repository"
       >
-        <p class="text-default-900/50 mb-4">
+        <p class="text-default-900/50 relative z-10 mb-4">
           I am developing a full-fledged hospital website with a management
           system capable of handling appointments, exams results, billing and
           all sorts of features. To do it, I am relying on <span
@@ -49,22 +49,38 @@ export const prerender = true;
         </p>
       </Project>
       <Project
-        class="opacity-70 select-none"
         title="ai veterinary"
         web="Vite"
         framework="Astro"
         ui="Tailwind"
         components="Shadcn"
         database="Supabase"
-        button="On the go"
+        button="Not started yet"
       >
-        <p class="text-default-900/50 mb-4">
+        <p class="text-default-900/50 relative z-10 mb-4">
           Since we now have this whole AI thing with dozens of diferent --- and
           wonderful --- ideas, I decided to get on to mine own with a project to
           help those who have simple questions about their pets. The ideia is to
           provide some basic info from ChatGPT in a form, nothing crazy or
           anything. I intend to start it as soon as I have some free time to do
           so
+        </p>
+      </Project>
+      <Project
+        title="aprendizz"
+        web="Nuxt"
+        framework="Vue"
+        ui="Tailwind"
+        components="Shadcn"
+        database="Supabase"
+        button="Not started yet"
+      >
+        <p class="text-default-900/50 relative z-10 mb-4">
+          As my wife is a teacher, she gave me the idea to build something that
+          would help impoverished children to learn how to read and write in
+          Portuguese and English. I'm not really sure about what to do or how to
+          do it, but I would put my money on some silly educative games, so I
+          guess <span class="text-default-900">Three.js</span> is the way to go
         </p>
       </Project>
     </div>
@@ -77,7 +93,7 @@ export const prerender = true;
           width="32"
           height="32"
         />
-        <p class="text-default-900/50 my-4">
+        <p class="text-default-900/50 relative z-10 my-4">
           Right now, I can build apps with <span class="text-default-900"
             >WordPress</span
           > with custom theming, <span class="text-default-900"
@@ -95,7 +111,7 @@ export const prerender = true;
         <Button>Follow me</Button>
       </Card>
       <Card>
-        <p class="text-default-900/50">
+        <p class="text-default-900/50 relative z-10">
           I had some international experience in the past when I worked for <span
             class="text-default-900">Yamana Gold Inc.</span
           > from 2018 to 2020. Being honest, I was an apprentice and it wasn't a
@@ -112,7 +128,7 @@ export const prerender = true;
         database="MySQL"
         button="Pay a visit"
       >
-        <p class="text-default-900/50 mb-4">
+        <p class="text-default-900/50 relative z-10 mb-4">
           During the COVID-19 pandemic I was enrolled in college studying
           History. I had a grasp of IT back then, because of it ----- and to
           keep my mind busy ----- a friend and I founded the <span
@@ -131,6 +147,24 @@ export const prerender = true;
         alt="My Cats"
         sub="I have four extremely beautiful cats with me"
       />
+      <Project
+        title="editora la vita"
+        web="WordPress"
+        framework="PHP"
+        ui="Tailwind"
+        components="Flowbite"
+        database="MySQL"
+        button="Future plans"
+      >
+        <p class="text-default-900/50 relative z-10 mb-4">
+          So I did an odd job to a friend of mine that started a book publishing
+          company called <span class="text-default-900">Editora La Vita</span>.
+          I didn't have all the knowledge or time I have now, so I talked to her
+          and suggested to redo her website that was, again, built on top of <span
+            class="text-default-900">Elementor</span
+          >. I intend to implement Google Sign-in and some modern technologies to get her going on a safe, sound and pretty website to sell her books
+        </p>
+      </Project>
     </div>
   </section>
 </Layout>

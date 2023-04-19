@@ -6,7 +6,7 @@ import { cn } from "../lib/utils";
 const buttonVariants = cva("flex", {
   variants: {
     variant: {
-      default: "text-base lowercase border px-2 py-1 rounded-xl w-fit",
+      default: "inline-flex gap-1 justify-center content-center items-center text-base lowercase border px-2 py-1 rounded-xl w-fit",
       link: "text-base lowercase underline opacity-60 hover:opacity-100 transition-opacity cursor-pointer",
     },
     position: {
