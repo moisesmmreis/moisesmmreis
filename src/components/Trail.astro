@@ -8,8 +8,8 @@
   const Trail = document.getElementById("mouse-trail");
 
   const animateTrail = (e) => {
-    const x = e.clientX - Trail.offsetWidth / 2,
-      y = e.clientY - Trail.offsetHeight / 2;
+    const x = e.clientX - Trail.offsetWidth / 2 + 12,
+      y = e.clientY - Trail.offsetHeight / 2 + 12;
 
     const keyframes = {
       transform: `translate(${x}px, ${y}px)`,
