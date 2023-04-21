@@ -11,12 +11,9 @@ export interface Props extends HTMLAttributes<"div"> {
   ui: string;
   components: string;
   database: string;
-  button: string;
-  url: string;
-  variant: string;
 }
 
-const { title, web, framework, ui, components, database, button, url, variant, ...attrs } =
+const { title, web, framework, ui, components, database, ...attrs } =
   Astro.props as Props;
 ---
 
@@ -31,8 +28,5 @@ const { title, web, framework, ui, components, database, button, url, variant, .
       <li class="text-sm text-default-900/50 lowercase">{database}</li>
     </ul>
     <slot />
-    <a class="w-fit h-fit" href={url}>
-      <Button className="relative z-10">{button}</Button>    
-    </a>
   </Card>
 </div>

@@ -7,6 +7,7 @@ import Image from "../components/Image.astro";
 import Slider from "../components/Slider.astro";
 import Card from "../components/Card.astro";
 import Project from "../components/Project.astro";
+import Plans from "../components/Plans.astro";
 import { Button } from "../components/Button";
 
 import Sparkle from "../icons/Sparkle.astro";
@@ -21,12 +22,14 @@ export const prerender = true;
     <Title
       title="My name is Moisés Reis. Brazilian Software Engineering student, UI/UX enthusiast and father of the four beautiful cats."
     />
-    <Button>Talk to me ➡️</Button>
+    <a class="w-fit h-fit" href="https://api.whatsapp.com/send?phone=5574999587898&text=Let's%20talk!">
+      <Button>Talk to me ➡️</Button>
+    </a>
   </section>
   <section class="grid grid-cols-2 grid-flow-row auto-rows-min gap-6 mb-16">
     <div class="flex flex-col gap-6">
       <Card>
-        <p class="text-default-900/50">Get in touch with me trought my personal e-mail with the details for your project or ideia --- <span class="text-blue-700 underline">jacobina.moreira.reis@gmail.com</span> --- or you can just call me on WhatsApp anytime and I'll answer as soon as I can, my number is <span class="text-blue-700 underline">+55 (74) 9 9958-7898</span></p>
+        <p class="text-default-900/50">Get in touch with me trought my personal e-mail with the details for your project or ideia --- <a href="mailto:jacobina.moreira.reis@gmail.com"><span class="text-blue-700 underline">jacobina.moreira.reis@gmail.com</span></a> --- or you can just call me on WhatsApp anytime and I'll answer as soon as I can, my personal number is <a href="tel:+5574999587898"><span class="text-blue-700 underline">+55 (74) 9 9958-7898</span></a></p>
       </Card>
       <Image
         src="../../assets/img/IA0-dP_hnbl.jpg"
@@ -41,6 +44,8 @@ export const prerender = true;
         components="Shadcn"
         database="Supabase"
         button="View repository ➡️"
+        url="https://github.com/moisesmmreis/medical"
+        variant="default"
       >
         <p class="text-default-900/50 relative z-10 mb-4">
           I am developing a full-fledged hospital website with a management
@@ -52,16 +57,15 @@ export const prerender = true;
           > are also handy since they provide some much needed stability and reliability
         </p>
       </Project>
-      <Project
+      <Plans
         title="ai veterinary"
         web="Vite"
         framework="Astro"
         ui="Tailwind"
         components="Shadcn"
         database="Supabase"
-        button="Not started yet ⏹️"
       >
-        <p class="text-default-900/50 relative z-10 mb-4">
+        <p class="text-default-900/50 relative z-10">
           Since we now have this whole AI thing with dozens of diferent --- and
           wonderful --- ideas, I decided to get on to mine own with a project to
           help those who have simple questions about their pets. The ideia is to
@@ -69,24 +73,23 @@ export const prerender = true;
           anything. I intend to start it as soon as I have some free time to do
           so
         </p>
-      </Project>
-      <Project
+      </Plans>
+      <Plans
         title="aprendizz"
         web="Nuxt"
         framework="Vue"
         ui="Tailwind"
         components="Shadcn"
         database="Supabase"
-        button="Not started yet ⏹️"
       >
-        <p class="text-default-900/50 relative z-10 mb-4">
+        <p class="text-default-900/50 relative z-10">
           As my wife is a teacher, she gave me the idea to build something that
           would help impoverished children to learn how to read and write in
           Portuguese and English. I'm not really sure about what to do or how to
           do it, but I would put my money on some silly educative games, so I
           guess <span class="text-default-900">Three.js</span> is the way to go
         </p>
-      </Project>
+      </Plans>
     </div>
     <div class="flex flex-col gap-6">
       <Card>
@@ -110,7 +113,9 @@ export const prerender = true;
           to better my skills. I am also building some small side projects that will
           be shown in this portfolio and on my social media, hope you like it
         </p>
+        <a class="w-fit h-fit" href="https://twitter.com/moisesmmreis">
         <Button>Follow me ➡️</Button>
+        </a>
       </Card>
       <Card>
         <p class="text-default-900/50 relative z-10">
@@ -129,6 +134,8 @@ export const prerender = true;
         components="Flowbite"
         database="MySQL"
         button="Pay a visit ➡️"
+        url="http://judasasbotasde.com.br/"
+        variant="default"
       >
         <p class="text-default-900/50 relative z-10 mb-4">
           During the COVID-19 pandemic I was enrolled in college studying
@@ -149,16 +156,15 @@ export const prerender = true;
         alt="My Cats"
         sub="I have four extremely beautiful cats with me"
       />
-      <Project
+      <Plans
         title="editora la vita"
         web="WordPress"
         framework="PHP"
         ui="Tailwind"
         components="Flowbite"
         database="MySQL"
-        button="Future plans ⏹️"
       >
-        <p class="text-default-900/50 relative z-10 mb-4">
+        <p class="text-default-900/50 relative z-10">
           So I did an odd job to a friend of mine that started a book publishing
           company called <span class="text-default-900">Editora La Vita</span>.
           I didn't have all the knowledge or time I have now, so I talked to her
@@ -166,7 +172,7 @@ export const prerender = true;
             class="text-default-900">Elementor</span
           >. I intend to implement Google Sign-in and some modern technologies to get her going on a safe, sound and pretty website to sell her books
         </p>
-      </Project>
+      </Plans>
     </div>
   </section>
 </Layout>
