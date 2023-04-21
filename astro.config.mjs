@@ -12,5 +12,12 @@ export default defineConfig({
   adapter: vercelStatic({
     analytics: true
   }),
+  vite: {
+    define: {
+      "import.meta.env.PUBLIC_VERCEL_ANALYTICS_ID": JSON.stringify(
+        process.env.VERCEL_ANALYTICS_ID
+      ),
+    },
+  },
   integrations: [tailwind(), react(), image()]
 });
