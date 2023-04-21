@@ -11,7 +11,8 @@ import Plans from "../components/Plans.astro";
 import { Button } from "../components/Button";
 
 import Sparkle from "../icons/Sparkle.astro";
-import { ArrowTopRightIcon } from "@radix-ui/react-icons";
+import Caatinga from "../../assets/img/Gr2zdVNMD7E.jpg"
+import Lili from "../../assets/img/Lili.jpg"
 
 export const prerender = true;
 ---
@@ -32,7 +33,7 @@ export const prerender = true;
         <p class="text-default-900/50">Get in touch with me trought my personal e-mail with the details for your project or ideia --- <a href="mailto:jacobina.moreira.reis@gmail.com"><span class="text-blue-700 underline">jacobina.moreira.reis@gmail.com</span></a> --- or you can just call me on WhatsApp anytime and I'll answer as soon as I can, my personal number is <a href="tel:+5574999587898"><span class="text-blue-700 underline">+55 (74) 9 9958-7898</span></a></p>
       </Card>
       <Image
-        src="../../assets/img/IA0-dP_hnbl.jpg"
+        src={Caatinga}
         alt="Salvador, Bahia"
         sub="I am from the State of Bahia and, as I was a History student is the past, I've been learning about lots of interesting stuff"
       />
@@ -151,8 +152,8 @@ export const prerender = true;
           comming months
         </p>
       </Project>
-      <Slider
-        src="../../assets/img/a2s2brg9uki61.webp"
+      <Image
+        src={Lili}
         alt="My Cats"
         sub="I have four extremely beautiful cats with me"
       />
