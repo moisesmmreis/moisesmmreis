@@ -12,5 +12,5 @@ const { src, alt, sub } = Astro.props as Props;
 
 <div class="relative flex flex-col gap-2 max-h-fit">
   <span class="text-sm text-default-900/70">{sub}</span>
-  <Image class="object-cover rounded-2xl" src={src} width={768} height={768} aspectRatio="9:16" alt="My photos and such" />
+  <Image class="object-cover rounded-2xl !w-full !h-96" src={src} width={768} alt="My photos and such" />
 </div>
