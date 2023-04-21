@@ -9,6 +9,8 @@ import image from "@astrojs/image";
 // https://astro.build/config
 export default defineConfig({
   output: 'static',
-  adapter: vercelStatic(),
+  adapter: vercelStatic({
+    analytics: true
+  }),
   integrations: [tailwind(), react(), image()]
 });
