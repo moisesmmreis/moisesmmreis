@@ -1,40 +1,29 @@
-# Astro
+# 👋 My name is Moisés Moreira Reis
 
-This directory is a brief example of an [Astro](https://astro.build/) site that can be deployed to Vercel with zero configuration. This demo showcases:
+I am a Software Engineer student based in Brazil. I love coffee, have four little kittens and have a passion for open-source projects and the fight to spread science and information trough the web!
 
-- `/` - A static page (pre-rendered)
-- `/ssr` - A page that uses server-side rendering (through Vercel Edge Functions)
-- `/ssr-with-swr-caching` - Similar to the previous page, but also caches the response on the Vercel Edge Network using `cache-control` headers
-- `/edge.json` - An Astro API Endpoint that returns JSON data using Vercel Edge Functions
+## 🚀 Getting Started
 
-Learn more about [Astro on Vercel](https://vercel.com/docs/frameworks/astro).
+This is my personal website! You can use it, if you want. To get started, clone this repository and run **npm install** to install all the dependencies. Then, run **npm run dev** to start the development server. The app should be available at **http://localhost:3000**.
 
-## Deploy Your Own
+## 🛠️ Built With
 
-Deploy your own Astro project with Vercel.
+* **Tailwind CSS -** A utility-first CSS framework for rapid UI development
+* **Astro -** A JavaScript framwork that is just amazing to use. Love it. 
+* **Shadcn -**  A lot of UI elements for React provided by an amazing developer
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/vercel/vercel/tree/main/examples/astro&template=astro)
+## 🌐 Deployment
 
-_Live Example: https://astro-template.vercel.app_
+To get started, follow these steps:
 
-## Project Structure
+* Clone this repository to your local machine
+* Install the required dependencies by running **pnpm install** in your terminal
+* Start the development server by running **pnpm run dev**
 
-Astro looks for `.astro`, `.md`, or `.js` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## 🤝 Contributing
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components or layouts.
+Feel free to use this project as a starting point for your own personal portfolio, or to contribute to this project if you'd like to improve it.
 
-Any static assets, like images, can be placed in the `public/` directory.
+## 📝 License
 
-## Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                | Action                                             |
-| :--------------------- | :------------------------------------------------- |
-| `pnpm install`          | Installs dependencies                              |
-| `pnpm run dev`          | Starts local dev server at `localhost:3000`        |
-| `pnpm run build`        | Build your production site to `./dist/`            |
-| `pnpm run preview`      | Preview your build locally, before deploying       |
-| `pnpm run start`       | Starts a production dev server at  `localhost:3000`     |
-| `pnpm run astro ...`    | Run CLI commands like `astro add`, `astro preview` |
-| `pnpm run astro --help` | Get help using the Astro CLI                       |
+This project is licensed under the MIT License - see the _LICENSE_ file for details.
